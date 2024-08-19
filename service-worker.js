@@ -1,11 +1,11 @@
 const CACHE_NAME = 'poster-pwa-cache-v1';
 const urlsToCache = [
   '/',
-  '/index.html',
-  '/style.css',
-  '/app.js',
-  '/manifest.json',
-  '/images/photo1.jpg',
+  'index.html',
+  'style.css',
+  'app.js',
+  'manifest.json',
+  'images/photo1.jpg',
   '[Additional URLs]',
 ];
 
