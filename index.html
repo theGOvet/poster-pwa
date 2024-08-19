@@ -58,11 +58,47 @@ Treatment with tissue adhesive may be indicated in selected cases of corneal ulc
       </div>
     </section>
 
+    
+
     <section id="sketchfab">
       <h2>3D Model Viewer</h2>
       <!-- Sketchfab Embed -->
+          <!-- Insert an empty iframe with attributes -->
+    <iframe src="" id="api-frame" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+    <!-- Initialize the viewer -->
+    <script type="text/javascript">
+    var iframe = document.getElementById( 'api-frame' );
+    var uid = '7641c0e2d8a347c5baed7553324b4b7d';
+
+    // By default, the latest version of the viewer API will be used.
+    var client = new Sketchfab( iframe );
+
+    // Alternatively, you can request a specific version.
+    // var client = new Sketchfab( '1.12.1', iframe );
+
+    client.init( uid, {
+        success: function onSuccess( api ){
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+
+                // API is ready to use
+                // Insert your code here
+                console.log( 'Viewer is ready' );
+
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        }
+    } );
+    </script>
       <iframe title="3D Model" src="[Sketchfab Embed URL]" frameborder="0" allow="autoplay; fullscreen; vr"></iframe>
     </section>
+
+
+
+    
 
         <section id="references">
       <h2>References</h2>
