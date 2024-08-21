@@ -1,6 +1,6 @@
 (function() {
     var iframe = document.getElementById('api-frame');
-    var uid = '0635c339316347f0a6defb46ac4a34d8';
+    var uid = '383c6249a0f24d869202e3777a6096b0';
     var client = new Sketchfab(iframe);
 
     client.init(uid, {
