@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     collapsibleSections.forEach(section => {
         // Add a click event listener to the h2 inside each section
         section.querySelector('h2').addEventListener('click', function() {
+            // Toggle the 'expanded' class on the section itself
+            section.classList.toggle('expanded');
+
             // Get the content to be toggled
             const content = section.querySelector('.content');
 
@@ -15,3 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
