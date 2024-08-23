@@ -1,13 +1,17 @@
-document.querySelectorAll('.collapsible').forEach((section) => {
-    section.addEventListener('click', function() {
-        // Get the content inside the section to toggle its visibility
-        const content = section.querySelector('.content');
+// Wait for the document to load
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all sections with the class 'collapsible'
+    const collapsibleSections = document.querySelectorAll('.collapsible');
 
-        // Toggle the display property
-        if (content.style.display === "block") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
+    // Loop through each section
+    collapsibleSections.forEach(section => {
+        // Add a click event listener to the h2 inside each section
+        section.querySelector('h2').addEventListener('click', function() {
+            // Get the content to be toggled
+            const content = section.querySelector('.content');
+
+            // Toggle the display property between 'block' and 'none'
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
     });
 });
