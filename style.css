@@ -61,11 +61,23 @@ section.collapsible.expanded {
 
 /* Section Title Styles */
 section h2 {
+    cursor: pointer; /* Shows it's clickable */
+    display: flex;
+    justify-content: space-between; /* Space between the text and the icon */
+    
     font-size: 1.8em;
     color: #34495e;
     padding: 10px 0;
     cursor: pointer; /* Make it clear the title is clickable */
     margin: 0; /* Remove any extra margin */
+}
+
+section h2 .arrow {
+    transition: transform 0.3s ease; /* Smooth animation for rotation */
+}
+
+section.expanded h2 .arrow {
+    transform: rotate(180deg); /* Rotate the arrow when expanded */
 }
 
 section p {
