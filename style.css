@@ -50,14 +50,22 @@ main {
 }
 
 /* Section Styles */
-section {
-    margin-bottom: 1px;
+/* Reduce the space between sections when collapsed */
+section.collapsible {
+    margin-bottom: 5px; /* Smaller space when collapsed */
 }
 
+section.collapsible.expanded {
+    margin-bottom: 20px; /* Add more space when expanded */
+}
+
+/* Section Title Styles */
 section h2 {
     font-size: 1.8em;
-    color: #34495e; /* Darker blue-gray for section titles */
-    padding-bottom: 10px;
+    color: #34495e;
+    padding: 10px 0;
+    cursor: pointer; /* Make it clear the title is clickable */
+    margin: 0; /* Remove any extra margin */
 }
 
 section p {
@@ -68,6 +76,11 @@ section p {
 /* Hide the content inside each section by default */
 .collapsible .content {
     display: none;
+}
+
+/* Expanded content */
+section.collapsible.expanded .content {
+    display: block; /* Show content when expanded */
 }
 
 
