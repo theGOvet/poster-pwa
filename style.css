@@ -65,6 +65,14 @@ section p {
     margin: 10px 0;
 }
 
+/* Hide the content inside each section */
+.content {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
 /* Image Styles */
 img {
     max-width: 100%;
